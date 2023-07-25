@@ -39,9 +39,9 @@ SAVE=$BASE/results
 module load julia/1.9.1
 
 filename="`sed -n ${number}p $paramfile | awk '{print $1}'`"
-variable1="`sed -n ${number}p $paramfile | awk '{print $2}'`"
-variable2="`sed -n ${number}p $paramfile | awk '{print $3}'`"
-variable3="`sed -n ${number}p $paramfile | awk '{print $4}'`"
+variable1=`sed -n ${number}p $paramfile | awk '{print $2}'`
+variable2=`sed -n ${number}p $paramfile | awk '{print $3}'`
+variable3=`sed -n ${number}p $paramfile | awk '{print $4}'`
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
