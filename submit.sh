@@ -15,7 +15,7 @@
 
 # Set up the job array.  In this instance we have requested 10000 tasks
 # numbered 1 to 10000.
-#$ -t 1-10000
+#$ -t 1-4
 
 #$ -o output
 
@@ -29,10 +29,11 @@
 
 # Parse parameter file to get variables.
 #number=$SGE_TASK_ID
-paramfile=/home/ucanede/Scratch/test/params.txt
+#paramfile=/home/ucanede/Scratch/test/params.txt
 
 
 BASE=$PWD
+LOAD=$BASE/input
 SAVE=$BASE/results
 
 module load julia/1.9.1
@@ -41,5 +42,5 @@ number=$SGE_TASK_ID
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia --project=$BASE main.jl
+julia --project=$BASE main.jl --load=$LOAD
 mv results.jld2 $SAVE/results.jld2

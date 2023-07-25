@@ -1,11 +1,12 @@
 using DTWA
 using JLD2
 
-function main()
+
+function main(params)
 
     outfile = "results.jld2"
 
-    jldsave(outfile; collective_spin =$paramfil )
+    jldsave(outfile; collective_spin =params)
 end
 
-main()
+main(params)
