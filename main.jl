@@ -9,4 +9,4 @@ function main(params)
     jldsave(outfile; collective_spin =params)
 end
 
-main(params)
+main(ARGS)
