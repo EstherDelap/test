@@ -45,6 +45,6 @@ variable3="`sed -n ${number}p $paramfile | awk '{print $4}'`"
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia --project=$BASE main.jl variable1 variable2 variable3 
+julia --project=$BASE main.jl $variable1 $variable2 $variable3 
 #julia --project=$BASE main.jl [1,2,3,4]
 mv results.jld2 $SAVE/results.jld2
