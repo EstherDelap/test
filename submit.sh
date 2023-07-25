@@ -42,5 +42,5 @@ number=$SGE_TASK_ID
 
 cd $TMPDIR
 cp $BASE/main.jl $TMPDIR/
-julia --project=$BASE main.jl --load=$LOAD
+julia --project=$BASE main.jl --load=$LOAD/params.txt
 mv results.jld2 $SAVE/results.jld2
