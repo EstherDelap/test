@@ -29,11 +29,11 @@
 
 # Parse parameter file to get variables.
 number=$SGE_TASK_ID
-paramfile=/home/ucanede/Scratch/test/input/params.txt
+#paramfile=/home/ucanede/Scratch/test/input/params.txt
 
 
 BASE=$PWD
-#LOAD=$BASE/input
+paramfile=$BASE/input/params.txt
 SAVE=$BASE/results
 
 module load julia/1.9.1
