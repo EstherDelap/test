@@ -9,7 +9,7 @@ function main(p1, p2, p3)
 
     outfile = "results.jld2"
 
-    jldsave(outfile; collective_spin =[p1+p2+p3])
+    jldsave(outfile; collective_spin =[p1,p2,p3])
 end
 
 main(ARGS[1],ARGS[2],ARGS[3])
