@@ -33,7 +33,7 @@ number=$SGE_TASK_ID
 
 
 BASE=$PWD
-paramfile=$BASE/input/params.txt
+paramfile=$BASE/params.txt
 SAVE=$BASE/results
 
 module load julia/1.9.1
