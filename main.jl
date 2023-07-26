@@ -12,4 +12,4 @@ function main(p1, p2, p3)
     jldsave(outfile; collective_spin =[p1,p2,p3], type = typeof(p1))
 end
 
-main(ARGS[1],ARGS[2],ARGS[3])
+main(parse(Int64,ARGS[1]),parse(Int64,ARGS[2]),parse(Int64,ARGS[3]))
